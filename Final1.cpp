@@ -14,6 +14,8 @@ int main() {
         traffic[a]++;
         traffic[b]++;
     }
+
+    cout << "All airport traffic counts:\n";
     for (auto &p : traffic) cout << p.first << " " << p.second << endl;
 
     // Milestone 2
@@ -22,6 +24,7 @@ int main() {
         if (p.second > maxCount)
         maxCount = p.second;
     }
+
     cout << "\nBusiest airport(s) with count " << maxCount << ":\n";
     for (auto &p : traffic) {
         if (p.second == maxCount)
@@ -31,11 +34,11 @@ int main() {
     // Milestone 3
     auto printRange = [&](int low, int high) {
         cout << "\nAirports with traffic in range [" << low << ", " << high << "]:\n";
-        for (auto &p : traffic) {
+        for (auto &p : traffic)
             if (p.second >= low && p.second <= high)
                 cout << p.first << " " << p.second << endl;
-        }
     };
+    
     printRange(5,8);
     printRange(9,12);
 
