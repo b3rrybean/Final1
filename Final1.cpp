@@ -27,4 +27,13 @@ int main() {
         if (p.second == maxCount)
             cout << p.first << " " << p.second << endl;
     }
+
+    // Milestone 3
+    void printRange(int low, int high) {
+        for (auto &p : traffic) {
+            if (p.second >= low && p.second =< high)
+            cout << p.first << " " << p.second << endl;
+        }
+    }
+
 }
