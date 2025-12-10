@@ -29,11 +29,13 @@ int main() {
     }
 
     // Milestone 3
-    void printRange(int low, int high) {
-        for (auto &p : traffic) {
-            if (p.second >= low && p.second =< high)
+    void printRange(map<string,int> t, int low, int high) {
+        for (auto &p : t) {
+            if (p.second >= low && p.second <= high)
             cout << p.first << " " << p.second << endl;
         }
+        printRange(5,8);
+        printRange(9,12);
     }
 
 }
