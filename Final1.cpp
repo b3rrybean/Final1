@@ -29,13 +29,15 @@ int main() {
     }
 
     // Milestone 3
-    void printRange(map<string,int> t, int low, int high) {
-        for (auto &p : t) {
+    auto printRange = [&](int low, int high) {
+        cout << "\nAirports with traffic in range [" << low << ", " << high << "]:\n";
+        for (auto &p : traffic) {
             if (p.second >= low && p.second <= high)
-            cout << p.first << " " << p.second << endl;
+                cout << p.first << " " << p.second << endl;
         }
-        printRange(5,8);
-        printRange(9,12);
-    }
+    };
+    printRange(5,8);
+    printRange(9,12);
 
+    return 0;
 }
